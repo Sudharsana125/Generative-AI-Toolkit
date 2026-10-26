@@ -1,89 +1,73 @@
-# 🤖 Generative AI Experiments
+# Generative AI Experiments
+
+A practical exploration of Generative AI using Python, pretrained language models, and text-to-speech technology.
 
 <p align="center">
-  Exploring the power of Generative AI with Python and Hugging Face.
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Platform-Google%20Colab-F9AB00?logo=googlecolab&logoColor=white" alt="Google Colab"/>
+  <img src="https://img.shields.io/badge/AI-Generative%20AI-7C3AED" alt="Generative AI"/>
+  <img src="https://img.shields.io/badge/Status-Educational%20Project-2E8B57" alt="Educational Project"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python"/>
-  <img src="https://img.shields.io/badge/Platform-Google%20Colab-orange?logo=googlecolab" alt="Google Colab"/>
-  <img src="https://img.shields.io/badge/AI-Generative%20AI-purple" alt="Generative AI"/>
-  <img src="https://img.shields.io/badge/Status-Learning%20Project-green" alt="Learning Project"/>
-</p>
+## Overview
 
----
+This repository demonstrates three Generative AI and Natural Language Processing experiments:
 
-## 📌 About the Project
+- **Audio Generation:** Convert text into speech using Google Text-to-Speech (gTTS).
+- **Code Generation:** Generate programming code from natural-language prompts using Salesforce CodeGen.
+- **Fill-Mask Prediction:** Predict missing words in a sentence using a pretrained Transformer model.
 
-Welcome to **Generative AI Experiments**! 🚀
-
-This repository contains three practical experiments that demonstrate how AI can generate audio, write code, and predict missing words using pretrained models.
-
-## 📚 Table of Contents
-
-- [🎯 Objectives](#-objectives)
-- [🧪 Experiments](#-experiments)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [⚙️ Installation](#️-installation)
-- [▶️ How to Run](#️-how-to-run)
-- [📖 Learning Outcomes](#-learning-outcomes)
-
-## 🎯 Objectives
-
-- 🔊 Convert text into speech.
-- 💻 Generate code from natural-language prompts.
-- 📝 Predict missing words using a pretrained Transformer.
-- 🧠 Understand practical applications of Generative AI.
-
-## 🧪 Experiments
+## Experiments
 
 <details>
-<summary><strong>🔊 Experiment 1: Audio Generation Using gTTS</strong></summary>
+<summary><strong>01. Audio Generation Using gTTS</strong></summary>
 
-### Description
-Converts user-entered text into speech using Google Text-to-Speech.
+**Objective:** Convert user-provided text into spoken audio.
 
-**Libraries:** `gTTS`, `IPython`
+**Technologies:** Python, gTTS, IPython
 
 **Workflow:**
 
-User Input → Text-to-Speech Conversion → MP3 File → Audio Playback
+Text Input → Speech Synthesis → MP3 File → Audio Playback
 
-**Key concepts:**
-- Text-to-Speech (TTS)
-- Audio file generation
-- English speech synthesis
+**Key features:**
+- Accepts text from the user.
+- Generates English speech.
+- Saves the output as an MP3 file.
+- Plays the generated audio in Google Colab.
 
 </details>
 
 <details>
-<summary><strong>💻 Experiment 2: Code Generation Using Salesforce CodeGen</strong></summary>
+<summary><strong>02. Code Generation Using Salesforce CodeGen</strong></summary>
 
-### Description
-Generates programming code from a natural-language prompt using the pretrained `Salesforce/codegen-350M-mono` model.
+**Objective:** Generate source code from a natural-language instruction.
 
-**Library:** `transformers`
+**Model:** `Salesforce/codegen-350M-mono`
+
+**Technology:** Hugging Face Transformers
 
 **Workflow:**
 
-Code Prompt → CodeGen Model → Generated Code
+Natural-Language Prompt → CodeGen Model → Generated Code
 
-**Key concepts:**
-- Prompt engineering
-- Pretrained language models
-- AI-assisted programming
+**Key features:**
+- Accepts programming instructions as prompts.
+- Generates a code sequence using a pretrained model.
+- Displays the generated output for review.
 
-**Note:** Always test generated code before using it.
+*Note: Generated code should be reviewed and tested before use.*
 
 </details>
 
 <details>
-<summary><strong>📝 Experiment 3: Fill-Mask Text Prediction</strong></summary>
+<summary><strong>03. Fill-Mask Text Prediction**
 
-### Description
-Predicts possible missing words in a sentence using a pretrained Transformer model.
+</strong></summary>
 
-**Library:** `transformers`
+**Objective:** Predict possible missing words based on sentence context.
+
+**Technology:** Hugging Face Transformers
 
 **Example input:**
 
@@ -91,73 +75,77 @@ Predicts possible missing words in a sentence using a pretrained Transformer mod
 
 **Workflow:**
 
-Sentence with Missing Word → Transformer Model → Candidate Predictions
+Masked Sentence → Transformer Model → Candidate Words and Scores
 
-**Key concepts:**
-- Natural Language Processing (NLP)
-- Contextual word prediction
-- Masked language modeling
+**Key features:**
+- Predicts possible replacements for a mask token.
+- Ranks candidate words using model scores.
+- Demonstrates contextual language understanding.
 
 </details>
 
-## 🛠️ Technologies Used
+## Technology Stack
 
-| Technology | Purpose |
+| Technology | Application |
 |---|---|
-| Python | Programming language |
-| Google Colab | Cloud notebook environment |
-| gTTS | Text-to-speech generation |
-| IPython | Audio playback in notebooks |
-| Hugging Face Transformers | Access pretrained models |
+| Python | Core programming language |
+| Google Colab | Experiment execution |
+| gTTS | Text-to-speech conversion |
+| IPython | Audio playback |
+| Hugging Face Transformers | Pretrained model pipelines |
 | Salesforce CodeGen | Code generation |
 
-## ⚙️ Installation
+## Getting Started
 
-Install the required packages in Google Colab:
+### Prerequisites
 
-```bash
-pip install gtts transformers
+- A Google account to access Google Colab
+- Basic Python knowledge
+- An internet connection for package installation and online model or speech services
+
+### Installation
+
+Install the required libraries in a Google Colab cell:
+
+```python
+!pip install gtts transformers
 ```
 
-For notebook audio playback:
+For notebook audio playback, IPython is generally already available in Colab. If needed:
 
-```bash
-pip install IPython
+```python
+!pip install IPython
 ```
 
-## ▶️ How to Run
+### Execution
 
-1. Clone or download this repository.
-2. Open the notebook in Google Colab.
-3. Install the required packages.
-4. Run each experiment's cells in order.
-5. Enter text or prompts where requested.
-6. Observe the generated audio, code, and word predictions.
+1. Open the experiment notebook in Google Colab.
+2. Install the required dependencies.
+3. Run the cells in sequence.
+4. Enter text or prompts when requested.
+5. Observe the generated audio, code, or prediction results.
 
-## 📖 Learning Outcomes
+## Learning Outcomes
 
-After completing these experiments, you will understand:
+This project provides practical exposure to:
 
-- How text can be converted into speech.
-- How pretrained AI models generate code.
-- How Transformers predict missing words.
-- How Python libraries simplify Generative AI tasks.
+- Text-to-speech generation
+- Prompt-based code generation
+- Transformer-based masked language modeling
+- Using pretrained models through Python libraries
+- Building and evaluating simple Generative AI workflows
 
-## 🌟 Future Improvements
+## Future Enhancements
 
-- Add text-to-speech support for more languages.
-- Build a simple web interface for the experiments.
-- Add more code-generation prompts and test cases.
-- Explore other NLP and Generative AI models.
+- Support for additional languages in audio generation
+- A unified interface for all three experiments
+- Automated testing of generated code
+- Exploration of additional pretrained NLP models
 
-## 👩‍💻 Author
+## Author
 
-**Generative AI Learner**
+Developed as an educational project to explore practical applications of Generative AI.
 
-Created for educational and practical learning purposes.
+## License
 
----
-
-<p align="center">
-  ⭐ If you find this project useful, consider starring the repository!
-</p>
+This repository is intended for educational purposes. Refer to the respective model and library licenses before redistributing or using their outputs commercially.
