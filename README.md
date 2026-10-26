@@ -135,17 +135,3 @@ This project provides practical exposure to:
 - Using pretrained models through Python libraries
 - Building and evaluating simple Generative AI workflows
 
-## Future Enhancements
-
-- Support for additional languages in audio generation
-- A unified interface for all three experiments
-- Automated testing of generated code
-- Exploration of additional pretrained NLP models
-
-## Author
-
-Developed as an educational project to explore practical applications of Generative AI.
-
-## License
-
-This repository is intended for educational purposes. Refer to the respective model and library licenses before redistributing or using their outputs commercially.
